@@ -51,6 +51,8 @@ def gen_all(df, date):
 def load_data():
     df = pd.read_excel('tasks.xlsx')[['task','frequency','specified frequency']]
     df_comp = pd.read_excel('tasks_completion.xlsx')[['date','task','frequency','car completed','kam completed']]
+    df_comp['car completed'] = df_comp['car completed'].fillna(False).astype(bool)
+    df_comp['kam completed'] = df_comp['kam completed'].fillna(False).astype(bool)
     return df, df_comp
 
 ######################################################################################################################################
