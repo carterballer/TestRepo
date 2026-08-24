@@ -102,6 +102,6 @@ def completion(df_comp, date):
         key = 'multi_checkbox_editor')
     if st.button('save', type = 'primary'):
         st.session_state.df_today = edited_df
-        df_comp.loc[df_comp['date'] == date.strftime('%A, %Y-%m-%d')] = st.session_state.df_today
+        df_comp.loc[df_comp['date'] == date.strftime('%A, %Y-%m-%d'),['car completed', 'kam completed']] = st.session_state.df_today[['car completed', 'kam completed']].values
         df_comp.to_excel('tasks_completion.xlsx')
         st.write('saved')
