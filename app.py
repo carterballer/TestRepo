@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from tasks import *
 
-st.set_page_config(page_title='Daily Hub')
+st.set_page_config(page_title='Daily Hub', layout = 'centered')
 st.title('baller tasks')
 
 def on_date_change():

@@ -94,7 +94,7 @@ def completion(df_comp, date):
         st.session_state.df_today,
         column_config = {
             'date': None,
-            'task': st.column_config.TextColumn('task', disabled = True, width = 'large'),
+            'task': st.column_config.TextColumn('task', disabled = True),
             'frequency': None,
             'car completed': st.column_config.CheckboxColumn('car done', help = 'car completion'),
             'kam completed': st.column_config.CheckboxColumn('kam done', help = 'choose')},
